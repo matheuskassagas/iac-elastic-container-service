@@ -1,7 +1,7 @@
 resource "aws_lb" "alb" {
   name               = "ECS-Django"
   security_groups    = [aws_security_group.alb.id]
-  subnets            = [module.vpc.public_subnets]
+  subnets            = module.vpc.public_subnets
 }
 
 resource "aws_lb_listener" "http" {
@@ -23,5 +23,5 @@ resource "aws_lb_target_group" "alvo" {
 }
 
 output "IP" {
-  value = aws_alb.alb.dns_name
+  value = aws_lb.alb.dns_name
 }
