@@ -1,3 +1,8 @@
+## Antes de inicia o projeto com o init
+- Sera necessario iniciar um Repo ECR na aws 
+- Ter uma imagem docker, segue um projeto com passo a passo de uma imagem Django propria para utilizar aqui: 
+  - https://github.com/matheuskassagas/iac-docker-elastic-beanstalk-AWS
+
 ```
 cd env/prod
 terraform init
